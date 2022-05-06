@@ -1,18 +1,18 @@
-def one(n):
+def one(n: int) -> int:
     if n < 2:
         return n
     else:
         return n + one(n - 1)
 
 
-def two(num, pow):
+def two(num: int, pow: int) -> int:
     if pow < 2:
         return num
     else:
         return num * two(num, pow - 1)
 
 
-def three(n):
+def three(n: int) -> str:
     numbers = ''
     if n > 1:
         numbers += str(n) + " "
@@ -22,7 +22,7 @@ def three(n):
 
     return numbers
 
-def main():
+def main() -> None:
     print(one(1))       # 1
     print(one(2))       # 3
     print(one(3))       # 6
