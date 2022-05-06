@@ -20,9 +20,24 @@ class Controller(QMainWindow, Ui_MainWindow):
     def pow_disable(self):
         self.label_power.setEnabled(False)
         self.power_input_spinbox.setEnabled(False)
+        self.power_input_spinbox.setValue(0)
 
     def clear(self):
         self.output_textbrowser.setText('')
+        self.reset_inputs()
+
+    def reset_inputs(self):
+        self.number_input_spinbox.setValue(0)
+        self.power_input_spinbox.setValue(0)
+
+        self.radioButton_group_selector.setExclusive(False)
+        self.radioButton_one.setChecked(False)
+        self.radioButton_two.setChecked(False)
+        self.radioButton_three.setChecked(False)
+        self.radioButton_group_selector.setExclusive(True)
+
+        self.pow_disable()
+
 
     def submit(self):
         number = int(self.number_input_spinbox.text())
@@ -40,4 +55,6 @@ class Controller(QMainWindow, Ui_MainWindow):
             print(outputstring)
             print(outputstring.strip())
             self.output_textbrowser.append(outputstring)
+
+        self.reset_inputs()
 

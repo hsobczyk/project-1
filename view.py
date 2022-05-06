@@ -24,6 +24,9 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.radioButton_one.setFont(font)
         self.radioButton_one.setObjectName("radioButton_one")
+        self.radioButton_group_selector = QtWidgets.QButtonGroup(MainWindow)
+        self.radioButton_group_selector.setObjectName("radioButton_group_selector")
+        self.radioButton_group_selector.addButton(self.radioButton_one)
         self.radioButton_two = QtWidgets.QRadioButton(self.centralwidget)
         self.radioButton_two.setGeometry(QtCore.QRect(130, 20, 82, 17))
         font = QtGui.QFont()
@@ -31,6 +34,7 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.radioButton_two.setFont(font)
         self.radioButton_two.setObjectName("radioButton_two")
+        self.radioButton_group_selector.addButton(self.radioButton_two)
         self.radioButton_three = QtWidgets.QRadioButton(self.centralwidget)
         self.radioButton_three.setGeometry(QtCore.QRect(230, 20, 82, 17))
         font = QtGui.QFont()
@@ -38,6 +42,7 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.radioButton_three.setFont(font)
         self.radioButton_three.setObjectName("radioButton_three")
+        self.radioButton_group_selector.addButton(self.radioButton_three)
         self.number_input_spinbox = QtWidgets.QSpinBox(self.centralwidget)
         self.number_input_spinbox.setGeometry(QtCore.QRect(90, 80, 71, 51))
         font = QtGui.QFont()
@@ -99,7 +104,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Project 1"))
         self.radioButton_one.setText(_translate("MainWindow", "One"))
         self.radioButton_two.setText(_translate("MainWindow", "Two"))
         self.radioButton_three.setText(_translate("MainWindow", "Three"))
