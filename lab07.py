@@ -13,11 +13,14 @@ def two(num, pow):
 
 
 def three(n):
+    numbers = ''
     if n > 1:
-        print(n, end=" ")
-        three(n - 1)
+        numbers += str(n) + " "
+        numbers += three(n - 1)
     else:
-        print(n)
+        numbers += str(n)
+
+    return numbers
 
 def main():
     print(one(1))       # 1
