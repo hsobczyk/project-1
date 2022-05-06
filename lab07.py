@@ -1,4 +1,9 @@
 def one(n: int) -> int:
+    """
+    Function that adds all the numbers from 1 to n
+    :param n: Input number
+    :return: The result of the added sequence
+    """
     if n < 2:
         return n
     else:
@@ -6,6 +11,12 @@ def one(n: int) -> int:
 
 
 def two(num: int, pow: int) -> int:
+    """
+    Function that takes the power of a number
+    :param num: An integer
+    :param pow: An integer as exponent
+    :return: The result of num^pow
+    """
     if pow < 2:
         return num
     else:
@@ -13,6 +24,11 @@ def two(num: int, pow: int) -> int:
 
 
 def three(n: int) -> str:
+    """
+    Function that counts down in a single line string
+    :param n: an integer
+    :return: returns a string of numbers in descending order
+    """
     numbers = ''
     if n > 1:
         numbers += str(n) + " "
