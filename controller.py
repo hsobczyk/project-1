@@ -52,8 +52,6 @@ class Controller(QMainWindow, Ui_MainWindow):
             self.output_textbrowser.append(str(outputstring))
         elif self.radioButton_three.isChecked():
             outputstring = three(number)
-            print(outputstring)
-            print(outputstring.strip())
             self.output_textbrowser.append(outputstring)
 
         self.reset_inputs()
